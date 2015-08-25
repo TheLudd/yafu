@@ -1,0 +1,19 @@
+{
+  "name": "unary",
+  "version": "0.0.1",
+  "description": "Functional programming experimentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheLudd/unary.git"
+  },
+  "author": "Ludwig Magnusson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheLudd/unary/issues"
+  },
+  "homepage": "https://github.com/TheLudd/unary#readme"
+}
