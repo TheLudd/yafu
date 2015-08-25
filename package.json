@@ -4,7 +4,7 @@
   "description": "Functional programming experimentation",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "standard --verbose | snazzy && mocha"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,17 @@
   "bugs": {
     "url": "https://github.com/TheLudd/unary/issues"
   },
-  "homepage": "https://github.com/TheLudd/unary#readme"
+  "standard": {
+    "global": [
+      "describe",
+      "it"
+    ]
+  },
+  "homepage": "https://github.com/TheLudd/unary#readme",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5",
+    "snazzy": "^2.0.1",
+    "standard": "^5.1.0"
+  }
 }
