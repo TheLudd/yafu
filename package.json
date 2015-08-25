@@ -4,7 +4,7 @@
   "description": "Functional programming experimentation",
   "main": "index.js",
   "scripts": {
-    "test": "standard --verbose | snazzy && mocha"
+    "test": "standard --verbose | snazzy && mocha --harmony_arrow_functions"
   },
   "repository": {
     "type": "git",

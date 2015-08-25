@@ -1,5 +1,3 @@
-var chai = require('chai')
-chai.should()
 var curry = require('../lib/curry')
 
 describe('curry', function () {
