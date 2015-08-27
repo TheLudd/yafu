@@ -51,14 +51,6 @@ describe('curry', function () {
 
   describe('m > n', function () {
 
-    describe('when result is not a function', function () {
-
-      it('should return the result', function () {
-        add2(1, 2, 3).should.equal(3)
-      })
-
-    })
-
     describe('when result is a function', function () {
 
       it('should curry the result and apply the remaining arguments', function () {

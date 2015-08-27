@@ -4,7 +4,7 @@
   "description": "Functional programming experimentation",
   "main": "index.js",
   "scripts": {
-    "jsdoc": "jsdoc lib",
+    "jsdoc": "jsdoc -c jsdoc.json lib",
     "test": "standard --verbose | snazzy && mocha --harmony_arrow_functions"
   },
   "repository": {
