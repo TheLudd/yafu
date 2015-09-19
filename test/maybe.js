@@ -38,4 +38,19 @@ describe('Maybe', function () {
 
   })
 
+  describe('#reduce', function () {
+
+    it('should apply the acc function to the default value and the wrapped value', function () {
+      const m = Maybe.from(2)
+      const add = (a, b) => a + b
+      m.reduce(add, 10).should.equal(12)
+    })
+
+    it('should return the default value if it is a nothing', function () {
+      const m = Maybe.from(null)
+      m.reduce(null, 4).should.equal(4)
+    })
+
+  })
+
 })
