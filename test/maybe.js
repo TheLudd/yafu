@@ -53,4 +53,18 @@ describe('Maybe', function () {
 
   })
 
+  describe('.nothingIf', function () {
+
+    const isOdd = (n) => n % 2 === 1
+
+    it('should return a Nothing if the predicate is true for the value', function () {
+      Maybe.from(null).equals(Maybe.nothingIf(isOdd, 3)).should.equal(true)
+    })
+
+    it('should return a Just of he value if the predicate is false', function () {
+      Maybe.from(2).equals(Maybe.nothingIf(isOdd, 2)).should.equal(true)
+    })
+
+  })
+
 })
