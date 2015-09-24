@@ -1,11 +1,11 @@
-var curry = require('../lib/curry')
+import curry from '../lib/curry'
 
 describe('curry', function () {
 
-  var add2 = curry((a, b) => a + b)
-  var add3 = curry((a, b, c) => a + b + c)
+  const add2 = curry((a, b) => a + b)
+  const add3 = curry((a, b, c) => a + b + c)
 
-  var buildGreeting = curry(function (greeting) {
+  const buildGreeting = curry(function (greeting) {
     return function (firstName, lastName) {
       return [ greeting, firstName, lastName ].join(' ') + '!'
     }
