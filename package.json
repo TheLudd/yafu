@@ -2,7 +2,7 @@
   "name": "unary",
   "version": "0.0.1",
   "description": "Functional programming experimentation",
-  "main": "index.js",
+  "main": "./dist/unary",
   "scripts": {
     "acceptance": "mocha testrunners/acceptance",
     "bundle": "./build/bundle",
