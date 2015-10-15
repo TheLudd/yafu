@@ -1,3 +1,6 @@
 module.exports = function (a) {
-  return a.split(':')[0]
+  var rows = a.split('\n')
+  return rows.map(function (row) {
+    return row.split(':')[0]
+  }).join('\n')
 }

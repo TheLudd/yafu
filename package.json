@@ -28,6 +28,7 @@
   "homepage": "https://github.com/TheLudd/unary#readme",
   "devDependencies": {
     "babel": "^5.8.23",
+    "camel-case": "^1.1.2",
     "chai": "^3.2.0",
     "jsdoc": "^3.3.2",
     "mocha": "^2.2.5",
