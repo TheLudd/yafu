@@ -12,7 +12,8 @@ module.exports = function (curry) {
     })
 
     it('should return the input function if given no arguments', function () {
-      add2()(1, 2).should.equal(3)
+      add2().should.equal(add2())
+      add2.should.equal(add2())
     })
 
     it('should call the function if given the correct number of arguments', function () {
