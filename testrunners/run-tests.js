@@ -8,6 +8,10 @@ const testFiles = testFolder.filter(function (f) {
   return ignoreFiles.indexOf(f) === -1
 })
 
+function shouldBeCurried (name, fn) {
+  return name !== 'curry' && typeof fn === 'function'
+}
+
 export default function runTests (getTestSubject) {
 
   return function () {
@@ -16,7 +20,15 @@ export default function runTests (getTestSubject) {
       var name = f.split('.')[0]
       var test = require('../test/' + f)
       var fn = getTestSubject(name)
-      describe(name, test(fn))
+      describe(name, function () {
+        if (shouldBeCurried(name, fn)) {
+          it('is curried', function () {
+            fn().should.equal(fn())
+            fn.should.equal(fn())
+          })
+        }
+        test(fn)()
+      })
     })
 
   }
