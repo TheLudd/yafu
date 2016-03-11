@@ -5,5 +5,5 @@ function getFunction (name) {
   return require(filePath)
 }
 
-describe('unary', runTests(getFunction))
+describe('yafu', runTests(getFunction))
 

@@ -1,12 +1,12 @@
-# unary
-Some functional programming experimentation
+# yafu
+Yet another functional utility.
 
 ## Purpose
-unary is a functional programming library that supplies basic useful functions for JavaScript programming.
+yafu is a functional programming library that supplies basic useful functions for JavaScript programming.
 Very similar to [Ramda](http://ramdajs.com) but with a slightly different philosophy.
 
 Key points:
-  * [`curry`](https://github.com/TheLudd/unary/blob/master/lib/curry.js) works a bit differently than in many other JavaScript libraries,
+  * [`curry`](https://github.com/TheLudd/yafu/blob/master/lib/curry.js) works a bit differently than in many other JavaScript libraries,
   specifically when it is the case that a curried function receives more agruments than it has declared
   * each function *really* only does one thing and one thing only
   * no checking of types inside functions

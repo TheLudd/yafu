@@ -1,7 +1,7 @@
 import runTests from './run-tests'
 
-const bundle = require('../dist/unary')
-const minified = require('../dist/unary.min')
+const bundle = require('../dist/yafu')
+const minified = require('../dist/yafu.min')
 import camelCase from 'camel-case'
 
 function upperFirst (string) {
@@ -15,5 +15,5 @@ function getBundleFunction (bundle) {
   }
 }
 
-describe('unary bundle', runTests(getBundleFunction(bundle)))
-describe('unary bundle minified', runTests(getBundleFunction(minified)))
+describe('yafu bundle', runTests(getBundleFunction(bundle)))
+describe('yafu bundle minified', runTests(getBundleFunction(minified)))
