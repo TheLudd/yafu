@@ -1,7 +1,5 @@
 module.exports = function (curry) {
-
   return function () {
-
     const add2 = curry((a, b) => a + b)
     const add3 = curry((a, b, c) => a + b + c)
 
@@ -36,6 +34,13 @@ module.exports = function (curry) {
       buildGreeting('Hello')('John')('Doe').should.equal('Hello John Doe!')
     })
 
+    it('shoud be able to handle functions with many arguments', function () {
+      var join10 = curry(function (a, b, c, d, e, f, g, h, i, j) {
+        return [ a, b, c, d, e, f, g, h, i, j ].join(', ')
+      })
+      join10(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).should.equal(
+        '1, 2, 3, 4, 5, 6, 7, 8, 9, 10'
+      )
+    })
   }
-
 }
