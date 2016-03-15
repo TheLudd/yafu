@@ -1,14 +1,7 @@
 #!/bin/bash
 mkdir -p dist
-dependencyMatch="import \w+ from '.*'"
-findCommand="find lib -type f"
-withoutDependencies=`find lib -type f | xargs grep -LP "$dependencyMatch"`
-
-$findCommand \
-	| xargs grep -P "$dependencyMatch" \
-	| sed -r "s/^(.*):.*'\.\/(.*)'/\1:lib\/\2.js/g" \
-	| ./build/sort-files.js \
-	| xargs cat $withoutDependencies \
+node ./build/sorter \
+	| xargs cat \
 	| sed -e /import/d -r -e 's/export default curry\(_(.*)\)/export const \1 = curry(_\1)/g' \
  	| sed -e 's/export default \(.*\)/export { \1 }/g' \
  	| babel --modules umd > dist/yafu.js \
