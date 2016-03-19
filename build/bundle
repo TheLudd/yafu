@@ -2,7 +2,8 @@
 mkdir -p dist
 node ./build/sorter \
 	| xargs cat \
-	| sed -e /import/d -r -e 's/export default curry\(_(.*)\)/export const \1 = curry(_\1)/g' \
+	| sed -e /import/d -re '/export default _.*/d' \
+	| sed -re 's/export default curry\(_(.*)\)/export const \1 = curry(_\1)/g' \
  	| sed -e 's/export default \(.*\)/export { \1 }/g' \
  	| babel --modules umd > dist/yafu.js \
 	&& uglifyjs -m -p relative --source-map dist/yafu.min.map -o dist/yafu.min.js dist/yafu.js
