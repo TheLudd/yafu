@@ -39,5 +39,8 @@
   },
   "dependencies": {
     "changeify": "^0.1.2"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
