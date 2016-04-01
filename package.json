@@ -6,7 +6,7 @@
   "scripts": {
     "acceptance": "mocha testrunners/acceptance",
     "bundle": "./build/bundle",
-    "deploy": "npm run bundle && npm run acceptance && changeify",
+    "deploy": "npm run bundle && npm run acceptance && changeify -p",
     "jsdoc": "jsdoc -c jsdoc.json lib",
     "test": "standard --verbose | snazzy && mocha testrunners/unit",
     "unit": "mocha testrunners/unit"
