@@ -18,4 +18,5 @@ The idea is to be strict on these rules for the sake of being strict. This in or
 this results in better code in applications and programs where it is used.
 
 ## API
-For now, check the `lib` folder for the available functions. Each file should contain documentation.
+For now, check the `lib` folder for the available functions. Each file should contain documentation. Files starting with underscore are
+private functions and not a part of the public API.
