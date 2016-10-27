@@ -1,3 +1,8 @@
+### 0.1.4
+
+#### Additions
+ * Add callBinaryWith
+
 ### 0.1.3
 
 #### Bug fixes / improvemens
