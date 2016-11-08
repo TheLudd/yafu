@@ -13,9 +13,7 @@ function shouldBeCurried (name, fn) {
 }
 
 export default function runTests (getTestSubject) {
-
   return function () {
-
     testFiles.forEach(function (f) {
       var name = f.split('.')[0]
       var test = require('../test/' + f)
@@ -30,7 +28,5 @@ export default function runTests (getTestSubject) {
         test(fn)()
       })
     })
-
   }
-
 }

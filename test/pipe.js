@@ -1,7 +1,5 @@
 module.exports = function (pipe) {
-
   return function () {
-
     const toUpper = (s) => s.toUpperCase()
 
     it('should return the input for an empty list', function () {
@@ -18,7 +16,5 @@ module.exports = function (pipe) {
       const userArray = [ { name: 'stiller' } ]
       pipe([ first, getName, toUpper ], userArray).should.equal('STILLER')
     })
-
   }
-
 }

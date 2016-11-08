@@ -1,7 +1,5 @@
 module.exports = function (all) {
-
   return function () {
-
     var getFalse = () => false
     var isNumber = (n) => typeof n === 'number'
 
@@ -16,7 +14,5 @@ module.exports = function (all) {
     it('returns false if any element fails the predicate test', function () {
       all(isNumber, [ 1, '2', 3 ]).should.equal(false)
     })
-
   }
-
 }
