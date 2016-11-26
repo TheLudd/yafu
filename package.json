@@ -5,9 +5,9 @@
   "main": "./dist/yafu",
   "scripts": {
     "acceptance": "mocha testrunners/acceptance",
-    "bundle": "./build/bundle && npm run uglify",
+    "bundle": "./build/bundle && yarn run uglify",
     "clean": "rm -r dist",
-    "deploy": "npm run clean && npm run bundle && npm run acceptance && changeify -p",
+    "deploy": "yarn run clean && yarn run bundle && yarn run acceptance && changeify -p",
     "jsdoc": "jsdoc -c jsdoc.json lib",
     "test": "standard --verbose | snazzy && mocha testrunners/unit",
     "uglify": "uglifyjs -m -p relative --source-map dist/yafu.min.map -o dist/yafu.min.js dist/yafu.js",
