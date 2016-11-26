@@ -1,3 +1,8 @@
+### 0.1.5
+
+#### Additions
+ * Add eq and neq
+
 ### 0.1.4
 
 #### Additions
