@@ -42,5 +42,12 @@ module.exports = function (curry) {
         '1, 2, 3, 4, 5, 6, 7, 8, 9, 10'
       )
     })
+
+    it('should preserve the functions length', () => {
+      add2.length.should.equal(2)
+      add2(1).length.should.equal(1)
+      add3(1, 2).length.should.equal(1)
+      add3(2).length.should.equal(2)
+    })
   }
 }
