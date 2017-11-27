@@ -1,3 +1,11 @@
+### 0.1.7
+
+#### Additions
+ * Add generic compose function
+
+#### Bug fixes / improvemens
+ * Add length property to curried functions
+
 ### 0.1.5
 
 #### Additions
