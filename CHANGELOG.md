@@ -1,3 +1,9 @@
+### 0.1.8
+
+#### Bug fixes / improvemens
+ * Keep function names when currying
+ * Retain the result of the toString function when currying
+
 ### 0.1.7
 
 #### Additions
