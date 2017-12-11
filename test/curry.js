@@ -24,6 +24,11 @@ module.exports = function (curry) {
       curry((x) => x).name.should.equal('anonymous (curried)')
     })
 
+    it('should retain the result of the toString function', () => {
+      add.toString().should.equal(add2.toString())
+      add.toString().should.equal(add2(1).toString())
+    })
+
     it('should call the function if given the correct number of arguments', function () {
       add2(1, 2).should.equal(3)
       add3(1, 2, 3).should.equal(6)
