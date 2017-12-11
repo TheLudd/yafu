@@ -1,6 +1,7 @@
 module.exports = function (curry) {
   return function () {
-    const add2 = curry((a, b) => a + b)
+    const add = (a, b) => a + b
+    const add2 = curry(add)
     const add3 = curry((a, b, c) => a + b + c)
 
     const buildGreeting = curry(function (greeting) {
@@ -12,6 +13,15 @@ module.exports = function (curry) {
     it('should return the input function if given no arguments', function () {
       add2().should.equal(add2())
       add2.should.equal(add2())
+    })
+
+    it('should retain the functions name', () => {
+      add2.name.should.equal('add (curried)')
+      add2(1).name.should.equal('add (curried)')
+    })
+
+    it('should give anonymous functions the name anonymous', () => {
+      curry((x) => x).name.should.equal('anonymous (curried)')
     })
 
     it('should call the function if given the correct number of arguments', function () {
