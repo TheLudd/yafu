@@ -1,3 +1,11 @@
+### 0.1.9
+
+#### Additions
+ * Add uniq functions
+ * Add propEq function
+ * Add union function
+ * Add intersection function
+
 ### 0.1.8
 
 #### Bug fixes / improvemens
