@@ -1,3 +1,8 @@
+### 0.1.10
+
+#### Additions
+ * Add group by function
+
 ### 0.1.9
 
 #### Additions
