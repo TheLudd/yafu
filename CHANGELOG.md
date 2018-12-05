@@ -1,3 +1,8 @@
+### 0.1.11
+
+#### Additions
+ * Add difference function
+
 ### 0.1.10
 
 #### Additions
