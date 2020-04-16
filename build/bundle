@@ -1,8 +1,0 @@
-#!/bin/bash
-mkdir -p dist
-node ./build/sorter \
-	| xargs cat \
-	| sed -e /import/d -re '/export default _.*/d' \
-	| sed -re 's/export default curry\(_(.*)\)/export const \1 = curry(_\1)/g' \
- 	| sed -e 's/export default \(.*\)/export { \1 }/g' \
-	| babel --presets es2015 --plugins transform-es2015-modules-umd > dist/yafu.js
