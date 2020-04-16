@@ -7,14 +7,14 @@ module.exports = function (pipe) {
     })
 
     it('should return the result of the first function if only one is provided', function () {
-      pipe([ toUpper ], 'foo').should.equal('FOO')
+      pipe([toUpper], 'foo').should.equal('FOO')
     })
 
     it('pipe the result of the first function throug the list of functions', function () {
       const getName = (o) => o.name
       const first = (a) => a[0]
-      const userArray = [ { name: 'stiller' } ]
-      pipe([ first, getName, toUpper ], userArray).should.equal('STILLER')
+      const userArray = [{ name: 'stiller' }]
+      pipe([first, getName, toUpper], userArray).should.equal('STILLER')
     })
   }
 }

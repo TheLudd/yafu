@@ -8,11 +8,11 @@ module.exports = function (all) {
     })
 
     it('returns true if all elements pass the predicate test', function () {
-      all(isNumber, [ 1, 2, 3 ]).should.equal(true)
+      all(isNumber, [1, 2, 3]).should.equal(true)
     })
 
     it('returns false if any element fails the predicate test', function () {
-      all(isNumber, [ 1, '2', 3 ]).should.equal(false)
+      all(isNumber, [1, '2', 3]).should.equal(false)
     })
   }
 }

@@ -3,9 +3,9 @@ const {
   basename,
   extname,
   join,
-  normalize,
+  normalize
 } = require('path')
-const camelCase = require('camel-case')
+const { camelCase } = require('camel-case')
 const mkdirp = require('mkdirp')
 
 function createIndex (projectPath) {
@@ -40,7 +40,7 @@ function createIndex (projectPath) {
     '',
     'export {',
     exports,
-    '}',
+    '}'
   ].join('\n')
   mkdirp.sync('dist')
   writeFileSync(getAbsolute('index.js'), content)

@@ -7,7 +7,7 @@ module.exports = function (reduce) {
     })
 
     it('performs the reduce operation on the array', function () {
-      reduce(add, 0, [ 1, 2, 3 ]).should.equal(6)
+      reduce(add, 0, [1, 2, 3]).should.equal(6)
     })
   }
 }

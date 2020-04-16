@@ -8,8 +8,8 @@ module.exports = function (uniqBy) {
 
     it('returns a list of unique values based on predicate', () => {
       const pred = (o) => o.foo
-      const input = [ {foo: 1}, {foo: 2}, {foo: 2}, {foo: 3} ]
-      const expected = [ {foo: 1}, {foo: 2}, {foo: 3} ]
+      const input = [{ foo: 1 }, { foo: 2 }, { foo: 2 }, { foo: 3 }]
+      const expected = [{ foo: 1 }, { foo: 2 }, { foo: 3 }]
       uniqBy(pred, input).should.deep.equal(expected)
     })
 

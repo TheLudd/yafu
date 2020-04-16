@@ -8,11 +8,11 @@ module.exports = function (satisfiesAll) {
     })
 
     it('returns true for a list of predicates that all return true for the value', function () {
-      satisfiesAll([ isNumber, isOdd ], 3).should.equal(true)
+      satisfiesAll([isNumber, isOdd], 3).should.equal(true)
     })
 
     it('returns false for a list of predicates where at leas one return false for the value', function () {
-      satisfiesAll([ isNumber, isOdd ], 4).should.equal(false)
+      satisfiesAll([isNumber, isOdd], 4).should.equal(false)
     })
   }
 }

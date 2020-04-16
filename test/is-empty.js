@@ -5,7 +5,7 @@ module.exports = function (isEmpty) {
     })
 
     it('should return false for a non empty array', function () {
-      isEmpty([ 1 ]).should.equal(false)
+      isEmpty([1]).should.equal(false)
     })
   }
 }

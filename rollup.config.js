@@ -7,15 +7,15 @@ export default {
     file: 'dist/yafu.js',
     format: 'umd',
     name: 'yafu',
-    sourcemap: true,
+    sourcemap: true
   },
   plugins: [
     resolve(),
     babel({
       exclude: 'node_modules/**',
       presets: [
-        [ '@babel/preset-env', { modules: false } ],
-      ],
-    }),
+        ['@babel/preset-env', { modules: false }]
+      ]
+    })
   ]
 }

@@ -16,9 +16,9 @@ module.exports = function (groupBy) {
       ]
       const byAuthor = (book) => book.author
       groupBy(byAuthor, books).should.deep.equal({
-        Bob: [ { author: 'Bob', title: 'Foo' }, { author: 'Bob', title: 'Baz' } ],
-        Alice: [ { author: 'Alice', title: 'Bar' }, { author: 'Alice', title: 'Quux' } ],
-        Carol: [ { author: 'Carol', title: 'Qux' } ]
+        Bob: [{ author: 'Bob', title: 'Foo' }, { author: 'Bob', title: 'Baz' }],
+        Alice: [{ author: 'Alice', title: 'Bar' }, { author: 'Alice', title: 'Quux' }],
+        Carol: [{ author: 'Carol', title: 'Qux' }]
       })
     })
   }

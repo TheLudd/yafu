@@ -3,7 +3,7 @@ chai.should()
 
 const fs = require('fs')
 const testFolder = fs.readdirSync('./test')
-const ignoreFiles = [ '__tests-setup.js', 'mocha.opts' ]
+const ignoreFiles = ['__tests-setup.js', 'mocha.opts']
 const testFiles = testFolder.filter(function (f) {
   return ignoreFiles.indexOf(f) === -1
 })

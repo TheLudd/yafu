@@ -6,4 +6,3 @@ function getFunction (name) {
 }
 
 describe('yafu', runTests(getFunction))
-

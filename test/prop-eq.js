@@ -1,6 +1,6 @@
 module.exports = function (propEq) {
   return function () {
-    const obj = {foo: 'bar'}
+    const obj = { foo: 'bar' }
 
     it('returns true for matching value', () => {
       propEq('foo', 'bar', obj).should.equal(true)
