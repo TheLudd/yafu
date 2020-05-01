@@ -1,6 +1,6 @@
 {
   "name": "yafu",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Functional programming experimentation",
   "main": "./dist/umd/yafu",
   "module": "./lib/index.js",
