@@ -2,7 +2,7 @@
   "name": "yafu",
   "version": "0.1.12",
   "description": "Functional programming experimentation",
-  "main": "./dist/yafu",
+  "main": "./dist/umd/yafu",
   "scripts": {
     "acceptance": "mocha testrunners/acceptance",
     "prebundle": "node build/create-index",
@@ -12,7 +12,7 @@
     "deploy": "yarn clean && yarn run bundle && yarn run acceptance && changeify -p",
     "jsdoc": "jsdoc -c jsdoc.json lib",
     "test": "standard --verbose | snazzy && yarn unit",
-    "uglify": "uglifyjs -m -o dist/yafu.min.js dist/yafu.js --source-map 'url=yafu.min.js.map'",
+    "uglify": "uglifyjs -m -o dist/umd/yafu.min.js dist/umd/yafu.js --source-map 'url=yafu.min.js.map'",
     "unit": "mocha testrunners/unit"
   },
   "repository": {

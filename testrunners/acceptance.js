@@ -1,8 +1,8 @@
 import runTests from './run-tests'
 import { camelCase } from 'camel-case'
 
-const bundle = require('../dist/yafu')
-const minified = require('../dist/yafu.min')
+const bundle = require('../dist/umd/yafu')
+const minified = require('../dist/umd/yafu.min')
 
 function upperFirst (string) {
   return string[0].toUpperCase() + string.substring(1)
