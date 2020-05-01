@@ -1,3 +1,11 @@
+### 0.1.13
+
+#### Additions
+ * publish as module
+
+#### Bug fixes / improvemens
+ * transpile umd build to umd folder
+
 ### 0.1.12
 
 
