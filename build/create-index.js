@@ -6,7 +6,6 @@ const {
   normalize
 } = require('path')
 const { camelCase } = require('camel-case')
-const mkdirp = require('mkdirp')
 
 function createIndex (projectPath) {
   function getFileBaseName (fullName) {
@@ -19,7 +18,7 @@ function createIndex (projectPath) {
   }
 
   const jsFiles = readdirSync(getAbsolute('lib'))
-    .filter((s) => getFileBaseName(s).indexOf('_') !== 0)
+    .filter((s) => getFileBaseName(s).indexOf('_') !== 0 && s !== 'index.js')
 
   const varNames = jsFiles
     .map(getFileBaseName)
@@ -28,22 +27,10 @@ function createIndex (projectPath) {
   const imports = jsFiles.map((item, i) => {
     const pathName = `./${getFileBaseName(item)}`
     const varName = varNames[i]
-    return `import ${varName} from './lib/${pathName}'`
+    return `export { default as ${varName} } from '${pathName}'`
   }).join('\n')
 
-  const exports = varNames.map((varName) => {
-    return ` ${varName},`
-  }).join('\n')
-
-  const content = [
-    imports,
-    '',
-    'export {',
-    exports,
-    '}'
-  ].join('\n')
-  mkdirp.sync('dist')
-  writeFileSync(getAbsolute('index.js'), content)
+  writeFileSync(getAbsolute('lib/index.js'), imports)
 }
 
 createIndex(process.cwd())

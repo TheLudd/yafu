@@ -3,12 +3,13 @@
   "version": "0.1.12",
   "description": "Functional programming experimentation",
   "main": "./dist/umd/yafu",
+  "module": "./lib/index.js",
   "scripts": {
     "acceptance": "mocha testrunners/acceptance",
     "prebundle": "node build/create-index",
     "bundle": "yarn clean && rollup -c && yarn run uglify",
-    "postbundle": "rm index.js",
-    "clean": "rm -r dist",
+    "postpublish": "rm lib/index.js",
+    "clean": "rm -rf dist",
     "deploy": "yarn clean && yarn run bundle && yarn run acceptance && changeify -p",
     "jsdoc": "jsdoc -c jsdoc.json lib",
     "test": "standard --verbose | snazzy && yarn unit",
@@ -50,6 +51,7 @@
     "uglify-js": "^3.9.1"
   },
   "files": [
-    "dist"
+    "dist",
+    "lib"
   ]
 }
